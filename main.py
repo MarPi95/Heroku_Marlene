@@ -6,16 +6,17 @@ webapp = Flask(__name__)
 @webapp.route("/")
 def index():
     namen = "Hans"
-    return render_template("index.html", namen=namen, datum_today=datetime.now)
+    return render_template("index.html", namen=namen, datum_today=datetime.now())
 
 @webapp.route("/about")
 def about():
-    return render_template("about.html")
+    authors = ["Hans", "Heike", "Monika"]
+    return render_template("about.html", authors=authors)
 
 @webapp.route("/projects")
 def project():
     projects= ["Flask Projects", "Boogle", "Fakebook"]
-    return render_template("Project.html")
+    return render_template("Project.html", projects = projects)
 
 if __name__ == "__main__":
     webapp.run()
