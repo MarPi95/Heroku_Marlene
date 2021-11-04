@@ -1,5 +1,12 @@
-{% extends "base.hmtl" %}
+{% extends "base.html" %}
 
 {% block content %}
-  <h1>Projects</h1>
-{% block content %}
+    <h1>Projects</h1>
+
+    <ul>
+      {% for project in projects %}
+      <li>{{ project }}</li>
+      {% endfor %}}
+    </ul>
+
+{% endblock content %}
