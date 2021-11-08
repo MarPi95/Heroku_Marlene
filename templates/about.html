@@ -13,6 +13,17 @@
         </ul>
     {% else %}
         <p>Sorry we don't have any authors.</p>
-
     {% endif %}
+
+    <form method="post" action="/about">
+        <input type="text" name="author" placeholder="Enter author name">
+        <input type="submit" value="Submit">
+    </form>
+
+    <form method="post" action="/contact">
+        <input type="text" name="user_name" placeholder="Please enter the user name">
+        <input type="password" name="password" placeholder="Please enter the password">
+
+        <input type="submit" value="Submit">
+    </form>
 {% endblock content %}
